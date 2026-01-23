@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es" style="scroll-behavior:smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paint Quality | Pinturas Automotrices Profesionales en El Salvador</title>
+  <meta name="description" content="Paint Quality ofrece pinturas automotrices profesionales, catálogo descargable y cotizaciones por WhatsApp en El Salvador. Calidad, fe y compromiso.">
+  <meta name="keywords" content="pinturas automotrices, pintura profesional, Paint Quality, catálogo de pinturas, cotización pinturas, El Salvador">
+  <meta name="author" content="Paint Quality">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+
+    body{background:#ffffff;color:#1f1f1f}
+
+    /* ===== HEADER NEGRO DORADO ===== */
+    header{
+      background:#0a0a0a;
+      padding:60px 20px;
+      text-align:center;
+      border-bottom:3px solid #FFD700;
+    }
+    .logo-header{
+      max-width:320px;
+      display:block;
+      margin:0 auto 16px;
+    }
+    header p{
+      color:#FFD700;
+      font-size:16px;
+      letter-spacing:1px;
+    }
+
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:1000;
+      background:#0a0a0a;
+      padding:16px;
+      text-align:center;
+      border-bottom:1px solid #FFD700;
+    }
+    nav a{
+      color:#FFD700;
+      margin:0 18px;
+      text-decoration:none;
+      font-weight:600;
+      letter-spacing:.8px;
+      font-size:15px;
+      transition:.3s;
+    }
+    nav a:hover{color:#ffffff}
+
+    /* SECCIONES */
+    section{
+      padding:80px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+    h2{
+      margin-bottom:25px;
+      font-size:30px;
+      font-weight:700;
+    }
+    p{
+      font-size:17px;
+      line-height:1.7;
+      margin-bottom:15px;
+    }
+
+    #inicio{text-align:center;padding:40px 20px}
+
+    /* PRODUCTOS / GALERÍA */
+    .products{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+    }
+    .product{
+      background:linear-gradient(135deg,#f3f3f3,#e0e0e0);
+      padding:40px;
+      border-radius:18px;
+      text-align:center;
+      box-shadow:0 20px 50px rgba(255,215,0,.2);
+      transition:.4s;
+      position:relative;
+      overflow:hidden;
+    }
+    .product:before{
+      content:"";position:absolute;inset:-50%;
+      background:linear-gradient(120deg,transparent,rgba(255,215,0,.35),transparent);
+      animation:shine 4s linear infinite;
+    }
+    @keyframes shine{0%{transform:translateX(-60%)}100%{transform:translateX(60%)}}
+    .product:hover{
+      transform:translateY(-8px) scale(1.02);
+      box-shadow:0 30px 60px rgba(255,215,0,.6), inset 0 0 20px rgba(255,215,0,.4);
+    }
+
+    /* CONTACTO */
+    .contact{
+      background:#f3f3f3;
+      padding:40px;
+      border-radius:16px;
+      box-shadow:0 15px 40px rgba(255,215,0,.2);
+    }
+    .contact label{display:block;margin-top:15px;font-weight:600}
+    .contact input,.contact textarea{
+      width:100%;
+      padding:10px;
+      margin-top:6px;
+      border:1px solid #FFD700;
+      border-radius:6px;
+    }
+    .contact button,.pay-btn{
+      margin-top:22px;
+      padding:14px;
+      background:linear-gradient(135deg,#FFD700,#FFC700);
+      color:#000;
+      font-weight:700;
+      border-radius:10px;
+      border:none;
+      cursor:pointer;
+      transition:.4s;
+      box-shadow:0 5px 15px rgba(255,215,0,.4);
+      text-decoration:none;
+      display:inline-block;
+    }
+    .contact button:hover,.pay-btn:hover{
+      transform:translateY(-3px) scale(1.03);
+      box-shadow:0 8px 25px rgba(255,215,0,.7);
+    }
+
+    /* ===== FOOTER NEGRO DORADO ===== */
+    footer{
+      background:#0a0a0a;
+      color:#FFD700;
+      text-align:center;
+      padding:60px 15px;
+      margin-top:100px;
+      border-top:3px solid #FFD700;
+    }
+    .logo-footer{
+      max-width:120px;
+      display:block;
+      margin:0 auto 15px;
+    }
+    .social-icons a{
+      color:#FFD700;
+      margin:0 14px;
+      font-size:24px;
+      transition:.3s;
+    }
+    .social-icons a:hover{color:#ffffff}
+
+    @media(max-width:768px){
+      .products{grid-template-columns:1fr}
+      h2{font-size:24px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" class="logo-header" alt="Paint Quality">
+  <p>Calidad profesional para el taller y la obra.</p>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#catalogo">Catálogo</a>
+  <a href="#galeria">Galería</a>
+  <a href="#cotizacion">Cotización</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="inicio">
+  <h2>Bienvenidos</h2>
+</section>
+
+<section id="historia">
+  <h2>Nuestra Historia</h2>
+  <div style="max-width:900px;margin:0 auto">
+    <p>Desde niño, Juan Pineda soñaba con tener su propio negocio. Creció en una familia de recursos limitados, pero con grandes valores: trabajo duro, honradez y perseverancia. A los 17 años ya era prácticamente independiente, forjando el carácter y la disciplina que más tarde lo llevarían a enfrentar uno de los mayores desafíos de su vida: construir algo propio para su familia.</p>
+    <p>La llegada de su primer hijo fue el impulso que Juan necesitaba. Quería crear un legado, algo que no solo le diera sustento, sino que inspirara a otros. Así nació Paint Color, una sociedad llena de ilusión… hasta que una noche la adversidad golpeó con fuerza: al abrir el local, descubrieron que habían sido víctimas de un robo que lo dejó todo a cero.</p>
+    <p>Con fe en Dios y sin rendirse, en 2017 Juan fundó Paint Quality en un pequeño garaje de una colonia. Con recursos escasos, comenzó entregando productos en bicicleta y luego en motocicleta, asumiendo él mismo cada tarea. Día tras día, su esfuerzo, guiado por la confianza en Dios, comenzó a rendir frutos.</p>
+    <p>Tras superar la pandemia, Paint Quality se consolidó en locales propios y hoy cuenta con dos sucursales, manteniendo un compromiso sólido con clientes, proveedores y colaboradores.</p>
+    <p><strong>Paint Quality es más que una empresa:</strong> es una historia de resiliencia, fe y dedicación, demostrando que con trabajo y confianza en Dios los sueños pueden superar cualquier obstáculo.</p>
+  </div>
+</section>
+
+
+
+<section id="catalogo">
+  <h2>Catálogo de Productos</h2>
+  <iframe src="catalogo.pdf" width="100%" height="600" style="border:1px solid #FFD700;border-radius:8px"></iframe>
+  <a href="catalogo.pdf" target="_blank" class="pay-btn">Descargar catálogo</a>
+</section>
+
+<section id="galeria">
+  <h2>Galería de Trabajos</h2>
+
+  
+
+  <div class="products">
+    <div class="product">Foto real</div>
+    <div class="product">Foto real</div>
+    <div class="product">Foto real</div>
+  </div>
+</section>
+
+<section id="cotizacion">
+  <h2>Solicita tu Cotización</h2>
+  <div class="contact">
+    <form onsubmit="enviarCotizacion(event)">
+      <label>Nombre</label>
+      <input type="text" id="nombre" required>
+      <label>Teléfono</label>
+      <input type="tel" id="telefono" required>
+      <label>Detalles</label>
+      <textarea id="detalles" rows="4"></textarea>
+      <button type="submit">Enviar por WhatsApp</button>
+    </form>
+  </div>
+
+  <h2 style="margin-top:60px">Pagar con PayPal</h2>
+  <p>Ingresa el monto acordado y realiza tu pago de forma segura.</p>
+  <div class="contact" style="max-width:400px;margin:30px auto">
+    <label>Monto (USD)</label>
+    <input type="number" id="montoPago" min="1" step="0.01" required min="1" step="0.01">
+  </div>
+  <div id="paypal-button-container" style="max-width:400px;margin:auto"></div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <div class="contact">
+    <label>Email</label>
+    <input type="email">
+    <label>Mensaje</label>
+    <textarea rows="4"></textarea>
+    <button>Enviar</button>
+  </div>
+</section>
+
+<footer>
+  <img src="logo.png" class="logo-footer" alt="Paint Quality">
+  <div class="social-icons">
+    <a href="https://wa.me/50370287283" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/share/17vZgPNyS9/"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/paintqualitysv"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@paintqualitysv"><i class="fab fa-tiktok"></i></a>
+  </div>
+  <p>© 2026 Paint Quality</p>
+</footer>
+
+<a href="https://wa.me/50370287283" target="_blank" target="_blank"
+style="position:fixed;bottom:20px;right:20px;background:#0a0a0a;color:#FFD700;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;border:2px solid #FFD700;box-shadow:0 8px 25px rgba(255,215,0,.5);">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+function enviarCotizacion(e){
+  e.preventDefault();
+  const n=nombre.value,t=telefono.value,d=detalles.value;
+  const msg=`Hola, quiero una cotización.%0ANombre: ${n}%0ATeléfono: ${t}%0ADetalles: ${d}`;
+  window.open(`https://wa.me/50370287283?text=${msg}`,'_blank');
+}
+</script>
+
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+<script>
+paypal.Buttons({
+  createOrder:(d,a)=>a.order.create({purchase_units:[{amount:{value:montoPago.value}}]}),
+  onApprove:(d,a)=>a.order.capture()
+}).render('#paypal-button-container');
+</script>
+
+</body>
+</html>
+
+
+
+
