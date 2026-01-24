@@ -32,8 +32,9 @@
     }
     header p{
       color:#FFD700;
-      font-size:16px;
-      letter-spacing:1px;
+      font-size:20px;
+      letter-spacing:1.5px;
+      font-weight:600;
     }
 
     /* NAV */
@@ -102,7 +103,6 @@
       overflow:hidden;
     }
     .product img{position:relative;z-index:1;}
-    }
     .product:before{
       content:"";
       position:absolute;
@@ -174,7 +174,29 @@
     .social-icons a:hover{color:#ffffff}
 
     @media(max-width:768px){
-      header{padding:40px 15px}
+      header{padding:30px 12px}
+      .logo-header{max-width:200px}
+      header p{font-size:18px;letter-spacing:1.2px}
+
+      nav{padding:12px}
+      nav a{display:inline-block;margin:6px 8px;font-size:13px}
+
+      section{padding:50px 14px}
+      h2{font-size:23px;text-align:center}
+      p{font-size:15.5px;line-height:1.65}
+
+      .products{grid-template-columns:1fr;gap:22px}
+      .products img{height:220px}
+      .product{padding:22px}
+
+      #catalogo iframe{height:420px}
+
+      .contact{padding:22px}
+      .contact button,.pay-btn{width:100%;text-align:center}
+
+      footer{padding:40px 12px}
+      .social-icons a{font-size:22px;margin:0 10px}
+    }
       .logo-header{max-width:220px}
       nav a{display:inline-block;margin:10px;font-size:14px}
       .products{grid-template-columns:1fr}
@@ -189,7 +211,7 @@
 
 <header>
   <img src="logo.png" class="logo-header" alt="Paint Quality">
-  <p>Calidad profesional para el taller y la obra.</p>
+  <p>Calidad, Tecnología e Innovación</p>
 </header>
 
 <nav>
@@ -209,11 +231,19 @@
 <section id="historia">
   <h2>Nuestra Historia</h2>
   <div style="max-width:900px;margin:0 auto">
-    <p>Desde niño, Juan Pineda soñaba con tener su propio negocio. Creció en una familia de recursos limitados, pero con grandes valores: trabajo duro, honradez y perseverancia. A los 17 años ya era prácticamente independiente, forjando el carácter y la disciplina que más tarde lo llevarían a enfrentar uno de los mayores desafíos de su vida: construir algo propio para su familia.</p>
-    <p>La llegada de su primer hijo fue el impulso que Juan necesitaba. Quería crear un legado, algo que no solo le diera sustento, sino que inspirara a otros. Así nació Paint Color, una sociedad llena de ilusión… hasta que una noche la adversidad golpeó con fuerza: al abrir el local, descubrieron que habían sido víctimas de un robo que lo dejó todo a cero.</p>
-    <p>Con fe en Dios y sin rendirse, en 2017 Juan fundó Paint Quality en un pequeño garaje de una colonia. Con recursos escasos, comenzó entregando productos en bicicleta y luego en motocicleta, asumiendo él mismo cada tarea. Día tras día, su esfuerzo, guiado por la confianza en Dios, comenzó a rendir frutos.</p>
-    <p>Tras superar la pandemia, Paint Quality se consolidó en locales propios y hoy cuenta con dos sucursales, manteniendo un compromiso sólido con clientes, proveedores y colaboradores.</p>
-    <p><strong>Paint Quality es más que una empresa:</strong> es una historia de resiliencia, fe y dedicación, demostrando que con trabajo y confianza en Dios los sueños pueden superar cualquier obstáculo.</p>
+    <div class="historia-corta">
+      <p>Desde niño, Juan Pineda soñaba con tener su propio negocio. Creció en una familia de recursos limitados, pero con grandes valores: trabajo duro, honradez y perseverancia. A los 17 años ya era prácticamente independiente, forjando el carácter y la disciplina que más tarde lo llevarían a enfrentar uno de los mayores desafíos de su vida: construir algo propio para su familia.</p>
+      <p>La llegada de su primer hijo fue el impulso que Juan necesitaba. Quería crear un legado, algo que no solo le diera sustento, sino que inspirara a otros.</p>
+    </div>
+
+    <div class="historia-completa" style="display:none">
+      <p>Así nació Paint Color, una sociedad llena de ilusión… hasta que una noche la adversidad golpeó con fuerza: al abrir el local, descubrieron que habían sido víctimas de un robo que lo dejó todo a cero.</p>
+      <p>Con fe en Dios y sin rendirse, en 2017 Juan fundó Paint Quality en un pequeño garaje de una colonia. Con recursos escasos, comenzó entregando productos en bicicleta y luego en motocicleta, asumiendo él mismo cada tarea. Día tras día, su esfuerzo, guiado por la confianza en Dios, comenzó a rendir frutos.</p>
+      <p>Tras superar la pandemia, Paint Quality se consolidó en locales propios y hoy cuenta con dos sucursales, manteniendo un compromiso sólido con clientes, proveedores y colaboradores.</p>
+      <p><strong>Paint Quality es más que una empresa:</strong> es una historia de resiliencia, fe y dedicación, demostrando que con trabajo y confianza en Dios los sueños pueden superar cualquier obstáculo.</p>
+    </div>
+
+    <button class="pay-btn" onclick="toggleHistoria(this)">Leer más</button>
   </div>
 </section>
 
@@ -230,7 +260,7 @@
   <div class="products">
     <div class="product"><img src="galeria1.jpg" alt="Pintura azul metalizada Paint Quality" loading="lazy" decoding="async"></div>
     <div class="product"><img src="galeria2.jpg" alt="Pintura verde perlada Paint Quality" loading="lazy" decoding="async"></div>
-    <div class="product"><img src="galeria3.jpg" alt="Pintura cobre metalizada Paint Quality" loading="lazy" decoding="async"></div>
+    <div class="product"><img src="galeria3.jpg" alt="Pintura Chanpam metalizada Paint Quality" loading="lazy" decoding="async"></div>
   </div>
 </section>
 
@@ -285,6 +315,17 @@ style="position:fixed;bottom:20px;right:20px;background:#0a0a0a;color:#FFD700;wi
 </a>
 
 <script>
+function toggleHistoria(btn){
+  const completa=document.querySelector('.historia-completa');
+  if(completa.style.display==='none'){
+    completa.style.display='block';
+    btn.textContent='Leer menos';
+  }else{
+    completa.style.display='none';
+    btn.textContent='Leer más';
+  }
+}
+
 function enviarCotizacion(e){
   e.preventDefault();
   const n=nombre.value,t=telefono.value,d=detalles.value;
@@ -303,3 +344,5 @@ paypal.Buttons({
 
 </body>
 </html>
+
+
