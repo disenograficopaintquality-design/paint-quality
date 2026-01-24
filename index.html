@@ -42,8 +42,14 @@
       position:sticky;top:0;z-index:1000;
       background:#0a0a0a;
       padding:16px;
-      text-align:center;
       border-bottom:1px solid #FFD700;
+      display:flex;
+      justify-content:center;
+    }
+    nav .nav-links{
+      display:flex;
+      gap:26px;
+      white-space:nowrap;
     }
     nav a{
       color:#FFD700;
@@ -178,6 +184,34 @@
       .logo-header{max-width:200px}
       header p{font-size:18px;letter-spacing:1.2px}
 
+      nav{padding:10px;overflow-x:auto}
+      nav .nav-links{
+        gap:18px;
+        justify-content:flex-start;
+      }
+      nav::-webkit-scrollbar{display:none}
+
+      nav a{font-size:13px;padding:6px 0}
+
+      section{padding:50px 14px}
+      h2{font-size:23px;text-align:center}
+      p{font-size:15.5px;line-height:1.65}
+
+      .products{grid-template-columns:1fr;gap:22px}
+      .products img{height:220px}
+      .product{padding:22px}
+
+      #catalogo iframe{height:420px}
+
+      .contact{padding:22px}
+      .contact button,.pay-btn{width:100%;text-align:center}
+
+      footer{padding:40px 12px}
+      .social-icons a{font-size:22px;margin:0 10px}
+    }
+      .logo-header{max-width:200px}
+      header p{font-size:18px;letter-spacing:1.2px}
+
       nav{padding:12px}
       nav a{display:inline-block;margin:6px 8px;font-size:13px}
 
@@ -197,12 +231,7 @@
       footer{padding:40px 12px}
       .social-icons a{font-size:22px;margin:0 10px}
     }
-      .logo-header{max-width:220px}
-      nav a{display:inline-block;margin:10px;font-size:14px}
-      .products{grid-template-columns:1fr}
-      section{padding:60px 15px}
-      h2{font-size:24px;text-align:center}
-      p{font-size:16px}
+      
     }
   </style>
 </head>
@@ -215,11 +244,13 @@
 </header>
 
 <nav>
-  <a href="#inicio">Inicio</a>
-  <a href="#catalogo">Catálogo</a>
-  <a href="#galeria">Galería</a>
-  <a href="#cotizacion">Cotización</a>
-  <a href="#contacto">Contacto</a>
+  <div class="nav-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#galeria">Galería</a>
+    <a href="#cotizacion">Cotización</a>
+    <a href="#contacto">Contacto</a>
+  </div>
 </nav>
 
 
@@ -344,5 +375,7 @@ paypal.Buttons({
 
 </body>
 </html>
+
+
 
 
