@@ -201,6 +201,8 @@
       .product{min-width:260px;padding:22px}
       .products img{height:220px}
 
+      .gallery-btn{display:none}
+
       #catalogo iframe{height:420px}
 
       .contact{padding:22px}
@@ -209,7 +211,32 @@
       footer{padding:40px 12px}
       .social-icons a{font-size:22px;margin:0 10px}
     }
-  </style>
+
+    .gallery-wrapper{
+      position:relative;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .gallery-btn{
+      background:#0a0a0a;
+      border:2px solid #FFD700;
+      color:#FFD700;
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:18px;
+      transition:.3s;
+    }
+    .gallery-btn:hover{
+      background:#FFD700;
+      color:#000;
+    }
+</style>
 </head>
 
 <body>
@@ -264,12 +291,19 @@
 
 <section id="galeria">
   <h2>Galería de Trabajos</h2>
-  <div class="products">
-    <div class="product"><img src="galeria1.jpg" alt="Pintura azul metalizada Paint Quality" loading="lazy" decoding="async"></div>
-    <div class="product"><img src="galeria2.jpg" alt="Pintura verde perlada Paint Quality" loading="lazy" decoding="async"></div>
-    <div class="product"><img src="galeria3.jpg" alt="Pintura champán metalizada Paint Quality" loading="lazy" decoding="async"></div>
-    <div class="product"><img src="galeria4.jpg" alt="Mezcla de pintura automotriz metálica Paint Quality" loading="lazy" decoding="async"></div>
-    <div class="product"><img src="galeria5.jpg" alt="Preparación de pintura automotriz profesional Paint Quality" loading="lazy" decoding="async"></div>
+
+  <div class="gallery-wrapper">
+    <button class="gallery-btn left" onclick="scrollGaleria(-1)"><i class="fas fa-chevron-left"></i></button>
+
+    <div class="products" id="galeriaScroll">
+      <div class="product"><img src="galeria1.jpg" alt="Pintura azul metalizada Paint Quality" loading="lazy" decoding="async"></div>
+      <div class="product"><img src="galeria2.jpg" alt="Pintura verde perlada Paint Quality" loading="lazy" decoding="async"></div>
+      <div class="product"><img src="galeria3.jpg" alt="Pintura champán metalizada Paint Quality" loading="lazy" decoding="async"></div>
+      <div class="product"><img src="galeria4.jpg" alt="Mezcla de pintura automotriz metálica Paint Quality" loading="lazy" decoding="async"></div>
+      <div class="product"><img src="galeria5.jpg" alt="Preparación de pintura automotriz profesional Paint Quality" loading="lazy" decoding="async"></div>
+    </div>
+
+    <button class="gallery-btn right" onclick="scrollGaleria(1)"><i class="fas fa-chevron-right"></i></button>
   </div>
 </section>
 
@@ -340,6 +374,11 @@ function enviarCotizacion(e){
   const n=nombre.value,t=telefono.value,d=detalles.value;
   const msg=`Hola, quiero una cotización.%0ANombre: ${n}%0ATeléfono: ${t}%0ADetalles: ${d}`;
   window.open(`https://wa.me/50370287283?text=${msg}`,'_blank');
+}
+
+function scrollGaleria(dir){
+  const g=document.getElementById('galeriaScroll');
+  g.scrollBy({left:dir*380,behavior:'smooth'});
 }
 </script>
 
